@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <title>Todo List</title>
+</head>
+<body>
+
+  <div class="container py-5 h-100">
+    <nav class="navbar-expand" style="font-size: 1.5rem">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active pe-5 ps-5">
+            <a class="nav-link" href="./index.html">Home <span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./index2.html">Todos</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col">
+        <div class="card" id="list1" style="border:none;background-color: #eff1f2;">
+          <div class="card-body py-4 px-4 px-md-5">
+
+            <p class="h1 text-center mt-3 mb-4 pb-3 text-primary">
+              <i class="fas fa-check-square me-1"></i>
+              <input type="checkbox" checked style="width:2rem ; height:2rem;">
+              <u>My Todo-s</u>
+            </p>
+
+            <div class="pb-2" >
+              <div class="card" style="border-radius:0.6rem;">
+                <div class="card-body">
+                  <form class="todo-form d-flex flex-row align-items-center">
+                    <input type="text" class="todo-input form-control form-control-lg" id="exampleFormControlInput1" placeholder="Add new..." onfocus="onFocus(event)" onblur="onBlur(event)">
+                    <a href="#!" data-mdb-toggle="tooltip" title="Set due date"><i class="fas fa-calendar-alt fa-lg me-3"></i></a>
+                    <button type="submit" id="submit" class="btn-lg btn-primary pe-4 ps-4 btn-outline-none">Add</button>
+                    <button type="submit" id="save" class="btn-lg btn-primary btn-outline-none">Save</button>
+                  </form>
+                  <span id="error-input"></span>
+                </div>
+              </div>
+            </div>
+            <hr class="my-4">
+            <div class="form-group">
+              <textarea class="todo-input form-control form-control-lg p-5"  id="exampleFormControlTextarea1" rows="13" style="resize: none;border-radius: 0.6rem;display: block;margin-bottom: 2.5rem" placeholder="Add new..."></textarea>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <span id="snackbar">The operation was successful.</span>
+  </div>
+
+  <script type="text/javascript" src="./main.js"></script>
+</body>
+</html>
